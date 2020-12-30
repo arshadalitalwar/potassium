@@ -1,0 +1,222 @@
+/*** start   myexercises page css by : Arshad Ali       ****/
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+.exercises_container {
+  width: 80%;
+  margin: 0 auto;
+}
+.exercises_container_head {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  border-bottom: 1px solid grey;
+  margin: 20px;
+}
+.exercises_container_head > div > a {
+  color: #25a9e0;
+  text-decoration: none;
+
+  font-size: 15px;
+  margin: 10px;
+}
+.exercises_container_head > div > a:nth-child(2) {
+  border-top: 1px solid grey;
+  padding: 13px 13px 5px 13px;
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+  border-bottom: 5px solid white;
+  color: grey;
+  border-radius: 2px;
+}
+.exercises_container_head > div:nth-child(1) {
+  margin-top: 35px;
+}
+.exercises_container_head > div > button {
+  background-color: #2ecc71;
+  height: 40px;
+  width: 200px;
+  color: white;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  outline: none;
+}
+.exercises_container_head > div > button:hover {
+  background-color: #088b3f;
+}
+
+.progress_head {
+  background-color: #25a9e0;
+  height: 230px;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  display: flex;
+  background-image: url("./myexercises.png");
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+#container_left {
+  width: 40%;
+  border-radius: 5px;
+  border: 1px solid grey;
+  margin-left: 20px;
+}
+.container_left_top {
+  background-color: #f5f5f5;
+  height: 40px;
+  margin-top: -20px;
+}
+.container_left_top > p {
+  margin: 20px;
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+.container_left_bootom > div {
+  width: 60%;
+
+  margin-bottom: 10px;
+}
+.container_left_bootom > div > h6 {
+  font-size: 16px;
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 0;
+}
+.container_left_bootom > div > input,
+.container_left_bootom > div > select,
+.container_left_bootom > div > div > button {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+}
+.container_left_bootom > div > input {
+  border: 1px solid grey;
+}
+#more,
+#addbutton {
+  margin-top: 10px;
+  border: none;
+  font-size: 18px;
+}
+#addbutton {
+  background-color: #2ecc71;
+  color: white;
+  outline: none;
+}
+#addbutton:hover {
+  background-color: #0f9246;
+}
+#more:hover {
+  background-color: grey;
+}
+.container_left_bootom > div > select {
+  font-size: 16px;
+}
+.left_mid {
+  display: flex;
+}
+#container_left_bootom > div {
+  width: 100%;
+}
+#container_left_bootom {
+  width: 55%;
+  margin-left: 10px;
+}
+.image_box > div {
+  height: 100px;
+  width: 100px;
+  background-color: rgb(201, 197, 197);
+  margin: 30px;
+  border: 1px solid grey;
+  text-align: center;
+  border-radius: 5px;
+}
+.image_box1 > div {
+  height: 60px;
+  width: 60px;
+  background-color: rgb(201, 197, 197);
+  margin: 20px;
+  border: 1px solid grey;
+  text-align: center;
+  border-radius: 5px;
+}
+.image_box > div > p {
+  margin-top: 30px;
+}
+.image_box1 > div > p {
+  margin-top: 15px;
+  font-size: 12px;
+}
+.image_box > input {
+  width: 60%;
+  height: 40px;
+  margin-left: 20px;
+}
+.container_my {
+  display: flex;
+}
+#container_right {
+  margin: 20px;
+  width: 50%;
+}
+#container_right > h1 {
+  font-size: 30px;
+  margin-left: 10px;
+  color: rgb(44, 44, 44);
+}
+#container_right_content {
+  width: 100%;
+  height: 200px;
+}
+#content_heading {
+  width: 100%;
+  height: 50px;
+  background-color: rgb(199, 196, 196);
+}
+#content_heading > p {
+  padding: 10px;
+  font-size: 20px;
+}
+#container_description {
+  display: flex;
+}
+#des_image {
+  width: 20%;
+
+  border: 1px solid grey;
+}
+#des_des {
+  width: 70%;
+
+  border: 1px solid grey;
+}
+#des_delete {
+  width: 10%;
+
+  border: 1px solid grey;
+}
+#des_delete > button > img {
+  height: 20px;
+}
+#des_delete > button {
+  margin: 10px;
+}
+#des_delete > button:hover {
+  background-color: red;
+  outline: none;
+}
+#des_des > p,
+#des_des > h2 {
+  margin: 20px;
+}
+/*** End   exercises css by : Arshad Ali       ****/ ;
