@@ -4,7 +4,32 @@ document.getElementById("more").addEventListener("click", More);
 showTask();
 
 var addTaskButton = document.getElementById("addbutton");
-addTaskButton.addEventListener("click", add);
+addTaskButton.addEventListener("click", add1);
+function add1() {
+  var addTaskInput = document.getElementById("exercise_name");
+  console.log("arshad");
+  var addTaskInputValue = addTaskInput.value;
+  var muscle = document.getElementById("musclegroup").value;
+  var description = "No description";
+  var Weight = "0";
+  if (addTaskInputValue.trim()) {
+    var task = localStorage.getItem("localtask");
+    if (task == null) {
+      taskObj = [];
+    } else {
+      taskObj = JSON.parse(task);
+    }
+    taskObj.push({
+      task_name: addTaskInputValue,
+      task_musle: muscle,
+      task_description: description,
+      task_weight: Weight,
+    });
+    localStorage.setItem("localtask", JSON.stringify(taskObj));
+    addTaskInput.value = "";
+  }
+  showTask();
+}
 function add() {
   var addTaskInput = document.getElementById("exercise_name");
   console.log("arshad");
@@ -12,10 +37,10 @@ function add() {
   var muscle = document.getElementById("musclegroup").value;
   var description = document.getElementById("description").value;
   var Weight = document.getElementById("weightkg").value;
-  if (Weight.trim()) {
+  if (!Weight.trim()) {
     Weight = 0;
   }
-  if (description.trim()) {
+  if (!description.trim()) {
     description = "No Description";
   }
   if (addTaskInputValue.trim()) {

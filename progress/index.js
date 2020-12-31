@@ -297,7 +297,7 @@ function weightlifted() {
       <div class="graph_detail">
         <div>
           <div id="weight_icon"></div>
-          <p>Total Wieght</p>
+          <p>Total Weight</p>
         </div>
         <div>
           <div id="reps_icon"></div>
@@ -319,9 +319,22 @@ function weightlifted() {
   document.getElementById("progress_right").innerHTML = html;
   forGraph();
 }
-var array = [10, 10];
+
 /// start progress page js by: Arshad Ali
 function forGraph() {
+  var task = localStorage.getItem("localtask");
+  if (task == null) {
+    taskObj = [];
+  } else {
+    taskObj = JSON.parse(task);
+  }
+  var wei = 0;
+  taskObj.forEach(function (item, index) {
+    wei += Number(item.task_weight);
+  });
+  var array = [0, 0];
+  array[0] = wei % 100;
+  array[1] = (taskObj.length % 10) * 10;
   $(function () {
     $(".bars li .bar").each(function (key) {
       var percentage = array[key];
