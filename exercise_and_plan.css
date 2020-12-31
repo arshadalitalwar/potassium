@@ -27,7 +27,7 @@
     height: 340px;
     margin: 10px;
 }
-.top-head , .ex_list > h1 {
+.ex_list > h1 , .head-table{
     text-align: center !important;
     padding: 20px !important;
     text-shadow: 2px 2px 2px #333 !important;
@@ -35,28 +35,31 @@
     color:  #041628 !important;
 
 }
-.abdominal >div {
-    border: 1px solid lightgray;
-    width: 70%;
-    margin: 10px auto;
+.images_workout {
+    width: 100px;
+    border: 1px solid #ddd;
 }
-.abdominal > div > * {
-    padding: 5px;
-    text-shadow: 1px 1px 1px burlywood;
-    text-align: center;
+tr:nth-child(even) {
+ background-color: #f9f9f9;;
 }
-.abdominal > div > h1 {
-    font-size: x-large;
+tr{ 
+    height: 50px;
+}
+table {
+    font-size: 14px;
+    line-height: 1.428571429;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 85%;
+    margin: 30px 150px 25px 100px;
+}
+td {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    border: 1px solid #ddd;
+}
+td h3:nth-child(1) {
     color: #428bca;
 }
-.abdominal img {
-    width: 90px ;
-    height: 90px;
-}
-.top {
-    border: 0px solid white !important;
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
+td h3:nth-child(2) {
+    color: #333;
 }
