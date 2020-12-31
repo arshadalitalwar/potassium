@@ -10,6 +10,14 @@ function add() {
   console.log("arshad");
   var addTaskInputValue = addTaskInput.value;
   var muscle = document.getElementById("musclegroup").value;
+  var description = document.getElementById("description").value;
+  var Weight = document.getElementById("weightkg").value;
+  if (Weight.trim()) {
+    Weight = 0;
+  }
+  if (description.trim()) {
+    description = "No Description";
+  }
   if (addTaskInputValue.trim()) {
     var task = localStorage.getItem("localtask");
     if (task == null) {
@@ -17,9 +25,16 @@ function add() {
     } else {
       taskObj = JSON.parse(task);
     }
-    taskObj.push({ task_name: addTaskInputValue, task_musle: muscle });
+    taskObj.push({
+      task_name: addTaskInputValue,
+      task_musle: muscle,
+      task_description: description,
+      task_weight: Weight,
+    });
     localStorage.setItem("localtask", JSON.stringify(taskObj));
     addTaskInput.value = "";
+    description.value = "";
+    Weight.value = "";
   }
   showTask();
 }
@@ -41,7 +56,9 @@ function showTask() {
     </div>
     <div id="des_des">
       <h2>${item.task_name}</h2>
-      <p>No description</p>
+      <p>${item.task_description}</p>
+      <p>${Number(item.task_weight)} KG</p>
+
     </div>
     <div id="des_delete">
       <button onclick="deleteItem(${index})">
@@ -89,9 +106,9 @@ function More() {
         <option value="Combined">Combined</option>
       </select>
       <h6>Description</h6>
-      <input type="text" />
-      <h6>Steps</h6>
-      <input type="text" />
+      <input type="text"  id="description"/>
+      <h6>Weight / Kg</h6>
+      <input type="text"  id="weightkg"/>
       <h6>Tips</h6>
       <input type="text" />
       <h6>Warning</h6>

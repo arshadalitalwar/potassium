@@ -1,4 +1,5 @@
 /// start progress page js by: Arshad Ali
+forGraph();
 
 document.getElementById("weightlifted").addEventListener("click", weightlifted);
 document.getElementById("maximumwork").addEventListener("click", maximumwork);
@@ -264,12 +265,72 @@ function weightlifted() {
         </select>
       </div>
     </div>
-    <h1 id="nodata">No Data Found</h1>
-    <h1 class="explaination">Explanation</h1>
-    <p id="des">
-      This graph shows the total weight you have lifted in recent workouts.
-    </p>`;
+    <div id="graph_container">
+      <select name="Select" id="select">
+        <option value="All Exercise">All Exercises</option>
+        <option value="pushup">Pushup</option>
+      </select>
+      <div id="para_graph"><p>Wieght Lifted in recent workout</p></div>
+      
+      <div class="graph_line">
+        <div></div>
+        <hr />
+        <div></div>
+        <hr />
+        <div></div>
+        <hr />
+        <div></div>
+        <hr />
+        <div></div>
+        <hr />
+        <div></div>
+        <hr />
+      </div>
+      <div class="graph_Y">
+        <p>10k</p>
+        <p>8k</p>
+        <p>6k</p>
+        <p>4k</p>
+        <p>2k</p>
+        <p>0k</p>
+      </div>
+      <div class="graph_detail">
+        <div>
+          <div id="weight_icon"></div>
+          <p>Total Wieght</p>
+        </div>
+        <div>
+          <div id="reps_icon"></div>
+          <p>Total Reps</p>
+        </div>
+      </div>
+      <div class="graph_bars">
+        <ul class="bars">
+          <li>
+            <div class="bar" id="bar1" data-percentage="20"></div>
+          </li>
+          <li>
+            <div class="bar" id="bar2" data-percentage="50"></div>
+          </li>
+        </ul>
+      </div>
+    `;
 
   document.getElementById("progress_right").innerHTML = html;
+  forGraph();
 }
+var array = [10, 10];
 /// start progress page js by: Arshad Ali
+function forGraph() {
+  $(function () {
+    $(".bars li .bar").each(function (key) {
+      var percentage = array[key];
+      $(this).animate(
+        {
+          height: percentage + "%",
+        },
+        1000
+      );
+    });
+  });
+}

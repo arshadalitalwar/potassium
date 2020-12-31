@@ -250,3 +250,115 @@ hr {
   height: 42px;
 }
 /*** End   progress page css by : Arshad Ali       ****/
+#graph_container {
+  height: 400px;
+  width: 800px;
+  position: absolute;
+  top: 450px;
+  left: 350px;
+}
+
+#para_graph > p {
+  text-align: center;
+  margin-top: 100px;
+  margin-left: -400px;
+}
+#graph_container > select {
+  border: none;
+  outline: none;
+  box-shadow: 1px 1px 1px 1px grey;
+  width: 200px;
+  height: 40px;
+  margin-top: 10px;
+  margin-left: -40px;
+}
+.graph_line {
+  width: 80%;
+  position: absolute;
+  top: 113px;
+  right: 0;
+}
+
+.graph_line > p {
+  margin: 0;
+  padding: 0;
+  font-size: 5px;
+}
+.graph_line > div {
+  height: 25px;
+}
+.graph_Y {
+  top: 80px;
+  left: 80px;
+  position: absolute;
+  margin-top: 40px;
+  margin-right: 10px;
+}
+.graph_Y > p {
+  line-height: 25px;
+  font-size: 15.5px;
+  padding-right: 20px;
+}
+.graph_detail {
+  position: absolute;
+  top: 130px;
+  right: 0px;
+  width: 200px;
+}
+.graph_detail > div {
+  display: flex;
+}
+.graph_detail > div > div {
+  height: 25px;
+  width: 25px;
+  margin: 10px;
+}
+#weight_icon,
+#bar1 {
+  background-color: #4897f1;
+}
+#reps_icon,
+#bar2 {
+  background-color: #89a54e;
+}
+.graph_bars {
+  position: absolute;
+  top: 45px;
+  right: -100px;
+  display: flex;
+  width: 600px;
+  height: 300px;
+  display: block;
+}
+.graph_bars > div {
+  width: 50px;
+  height: 200px;
+  margin: 10px;
+  background-color: blue;
+}
+.bars li {
+  display: table-cell;
+  width: 120px;
+  height: 300px;
+  position: relative;
+}
+
+.bars .bar {
+  display: block;
+  width: 100px;
+  margin-left: 10px;
+  position: absolute;
+  bottom: 0;
+  margin-left: 25px;
+  text-align: center;
+  box-shadow: 0 0 10px 0 rgba(23, 192, 235, 0.5);
+  transition: 0.5s;
+  transition-property: background, box-shadow;
+}
+
+.bars .bar:before {
+  color: #fff;
+  content: attr(data-percentage) "%";
+  position: relative;
+  bottom: 20px;
+}
