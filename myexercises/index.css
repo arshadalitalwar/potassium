@@ -220,6 +220,7 @@ body {
 #des_des > h2 {
   margin: 20px;
 }
+<<<<<<< HEAD
 /*** End   exercises css by : Arshad Ali       ****/
 .footer {
   background-color: #26a9e1;
@@ -227,6 +228,15 @@ body {
   font-size: 19px;
   height: 400px;
   font-weight: 400px;
+=======
+.footer {
+  background-color: #26a9e1;
+  font-size: 19px;
+  height: 380px;
+  margin-top: 40px;
+  float: left;
+  font-weight: 400;
+>>>>>>> 4210112cb4e8275ad762d8cd4b67093edc3de77c
   width: 102%;
   color: #ffffff;
   display: flex;
@@ -249,3 +259,7 @@ body {
   width: 134px;
   height: 42px;
 }
+<<<<<<< HEAD
+=======
+/*** End   exercises css by : Arshad Ali       ****/ ;
+>>>>>>> 4210112cb4e8275ad762d8cd4b67093edc3de77c
