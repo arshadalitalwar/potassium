@@ -219,4 +219,34 @@ hr {
 #max_calender > img {
   margin-top: 10px;
 }
+
+.footer {
+  background-color: #26a9e1;
+  font-size: 19px;
+  height: 380px;
+  margin-top: 40px;
+  float: left;
+  font-weight: 400;
+  width: 102%;
+  color: #ffffff;
+  display: flex;
+}
+.footer > div {
+  width: 200px;
+  margin: 40px;
+}
+.footer div div {
+  margin: 20px;
+  width: 100%;
+}
+.footer div div:hover {
+  text-decoration: underline;
+}
+.footer div div:nth-child(1) {
+  color: #041628;
+}
+.footer img {
+  width: 134px;
+  height: 42px;
+}
 /*** End   progress page css by : Arshad Ali       ****/
