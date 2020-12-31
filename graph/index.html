@@ -1,0 +1,65 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+      charset="utf-8"
+    ></script>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div id="graph_container">
+      <select name="Select" id="select">
+        <option value="All Exercise">All Exercises</option>
+        <option value="pushup">Pushup</option>
+      </select>
+      <p>Wieght Lifted in recent workout</p>
+      <div class="graph_line">
+        <div></div>
+        <hr />
+        <div></div>
+        <hr />
+        <div></div>
+        <hr />
+        <div></div>
+        <hr />
+        <div></div>
+        <hr />
+        <div></div>
+        <hr />
+      </div>
+      <div class="graph_Y">
+        <p>10k</p>
+        <p>8k</p>
+        <p>6k</p>
+        <p>4k</p>
+        <p>2k</p>
+        <p>0k</p>
+      </div>
+      <div class="graph_detail">
+        <div>
+          <div id="weight_icon"></div>
+          <p>Total Wieght</p>
+        </div>
+        <div>
+          <div id="reps_icon"></div>
+          <p>Total Reps</p>
+        </div>
+      </div>
+      <div class="graph_bars">
+        <ul class="bars">
+          <li>
+            <div class="bar" id="bar1" data-percentage="20"></div>
+          </li>
+          <li>
+            <div class="bar" id="bar2" data-percentage="50"></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

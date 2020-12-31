@@ -1,0 +1,38 @@
+.chart {
+  width: 600px;
+  height: 300px;
+  display: block;
+}
+
+.bars li {
+  display: table-cell;
+  width: 100px;
+  height: 300px;
+  position: relative;
+}
+
+.bars .bar {
+  display: block;
+  background: #17c0eb;
+  width: 50px;
+  position: absolute;
+  bottom: 0;
+  margin-left: 25px;
+  text-align: center;
+  box-shadow: 0 0 10px 0 rgba(23, 192, 235, 0.5);
+  transition: 0.5s;
+  transition-property: background, box-shadow;
+}
+
+.bars .bar:hover {
+  background: #55efc4;
+  box-shadow: 0 0 10px 0 rgba(85, 239, 196, 0.5);
+  cursor: pointer;
+}
+
+.bars .bar:before {
+  color: #fff;
+  content: attr(data-percentage) "%";
+  position: relative;
+  bottom: 20px;
+}
