@@ -6,6 +6,7 @@ body {
 }
 
 .progress_head {
+  margin-top: 20px;
   background-color: #25a9e0;
   height: 230px;
   width: 100%;
@@ -361,4 +362,104 @@ hr {
   content: attr(data-percentage) "%";
   position: relative;
   bottom: 20px;
+}
+.nav_bar {
+  min-width: 100%;
+  height: 80px;
+  background-color: rgb(4, 22, 40);
+  display: flex;
+  position: fixed;
+  top: 0;
+}
+
+.logo_of_gymwolf {
+  width: 150px;
+  height: 40px;
+  margin-left: 130px;
+  margin-top: 20px;
+}
+
+.first_link {
+  margin-left: 5%;
+  color: white;
+  margin-top: 1.5%;
+  font-size: 1.4em;
+  text-decoration: none;
+}
+
+.first_link:hover,
+.second_link:hover,
+.third_link:hover,
+.fourth_link:hover,
+.fifth_link:hover,
+#message:hover,
+.search_bar:hover {
+  color: rgb(37, 168, 223);
+}
+
+.second_link,
+.third_link,
+.fourth_link,
+.fifth_link,
+#message {
+  margin-left: 3%;
+  color: white;
+  margin-top: 1.5%;
+  font-size: 1.4em;
+  text-decoration: none;
+}
+
+.dropdown {
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 20px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  margin-top: 9%;
+  /* margin-left: 5%; */
+  cursor: pointer;
+}
+
+.dropbtn:hover {
+  color: rgb(37, 168, 223);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.search_bar {
+  background-color: rgb(4, 22, 40);
+  color: white;
+  margin-top: 1.8%;
+  margin-left: 1%;
 }
