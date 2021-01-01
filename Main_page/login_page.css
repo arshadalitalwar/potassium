@@ -246,7 +246,7 @@
 }
 
 .popup_content > div:nth-child(3) {
-  /* display: flex; */
+  display: flex;
 }
 
 .popup_content > div:nth-child(3) > div:nth-child(1) {
