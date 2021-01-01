@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gymwolf-Gym and Cardio workout tracker</title>
     <link rel="stylesheet" href="login_page.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-  </head>
-  <body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
     <!--Navigation Bar-->
     <!-- <div class="nav_bar">
         <img src="https://www.gymwolf.com/img/gymwolf.png" alt="logo of gym wolf" class="logo_of_gymwolf" />
@@ -33,303 +30,207 @@
     </div> -->
     <!--First_box-->
     <div class="first_box">
-      <div class="first_left_box">
-        <p>What Next: A Really Quick Guide.</p>
-        <ul>
-          <li>Verify your account</li>
-          <p>
-            We sent an e-mail to . Please check your inbox and click on the
-            activation link in the email message to verify your account.
-          </p>
-          <li>Create a new workout</li>
-          <p>Click on the "New Workout" button to add a new workout.</p>
-          <li>Add your workout data</li>
-          <p>
-            It's easy - just choose the exercises and add the sets. If you don't
-            find the exercise you want, then you can add your own.
-          </p>
-        </ul>
-        <p>
-          That's it! After this you can start using the graphs and share your
-          workouts with your friends or trainer.
-        </p>
-      </div>
-      <div class="first_right_box" id="first_right_box">
-        <div class="first_right_greenbox_container" id="new_workout_plan">
-          <i
-            class="fa fa-plus"
-            style="
-              font-size: 30px;
-              color: white;
-              float: left;
-              text-align: center;
-              margin-top: 2%;
-              margin-left: 34%;
-            "
-          ></i>
-          <p
-            style="
-              font-size: 25px;
-              color: white;
-              margin-top: 2%;
-              float: left;
-              margin-left: 3%;
-            "
-          >
-            New Workout
-          </p>
+        <div class="first_left_box">
+            <p>What Next: A Really Quick Guide.</p>
+            <ul>
+                <li>Verify your account</li>
+                <p>We sent an e-mail to . Please check your inbox and click on the activation link in the email message to verify your account.</p>
+                <li>Create a new workout</li>
+                <p>Click on the "New Workout" button to add a new workout.</p>
+                <li>Add your workout data</li>
+                <p>It's easy - just choose the exercises and add the sets. If you don't find the exercise you want, then you can add your own.</p>
+            </ul>
+            <p>That's it! After this you can start using the graphs and share your workouts with your friends or trainer.</p>
         </div>
-        <div class="my_workout" id="my_workout">
-          <h5 style="float: left">My Workouts</h5>
-          <h5 style="float: left; margin-left: 70%">Date</h5>
-          <hr style="clear: left" />
+        <div class="first_right_box" id="first_right_box">
+            <div class="first_right_greenbox_container" id="new_workout_plan">
+                <i class="fa fa-plus" style="font-size:30px;color: white; float: left; text-align: center; margin-top: 2%; margin-left: 34%;"></i>
+                <p style="font-size: 25px; color: white; margin-top: 2%; float: left; margin-left: 3%;">New Workout</p>
+            </div>
+            <div class="my_workout" id="my_workout">
+                <h5 style="float: left;">My Workouts</h5>
+                <h5 style="float: left; margin-left: 70%;">Date</h5>
+                <hr style="clear: left;"/>
+            </div>
         </div>
-      </div>
-    </div>
-    <br /><br />
+    </div><br/><br/>
     <!--Pop up Container-->
     <div class="popup">
-      <div class="popup_content">
-        <!--Main Heading-->
-        <!-- <div class="close_icon"> <span><i class="fa fa-close"></i></span> </div> -->
-        <!-- <i class="fa fa-close"></i> -->
-        <div class="heading_div">
-          <p>Gym Workout</p>
-          <input type="date" id="date" name="date" />
+        <div class="popup_content">
+            <!--Main Heading-->
+            <!-- <div class="close_icon"> <span><i class="fa fa-close"></i></span> </div> -->
+            <!-- <i class="fa fa-close"></i> -->
+            <div class="heading_div">
+                <p>Gym Workout</p>
+                <input type="date" id="date" name="date">
+            </div>
+            <div>
+                <h3>Exercise</h3>
+                <h3>Sets</h3>
+                <h3>Reps</h3>
+                <h3>Weight</h3>
+            </div>
+            <div>
+                <div>
+                    <p>1</p>
+                </div>
+                <input type="text" class="exercise_name" id="exercise_name" />
+                <input type="text" class="sets_number" id="sets_number" /><br/><br/>
+                <hr/>
+                <input type="text" class="another_sets_number" id="another_sets_number" />
+            </div>
+            <div></div>
+            <h3>Bodyweight:</h3>
+            <input type="text" class="bodyweight" id="bodyweight" />
+            <h3>Notes:</h3>
+            <textarea class="notes" id="notes" name="notes" rows="4" cols="142"></textarea>
+            <h3>Progress Image:</h3>
+            <img id="blah" src="http://placehold.it/180" alt="your image" class="image_box" /><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+            <input type='file' onchange="readURL(this);" class="image_file" />
+            <div class="fifth_div">
+                <button class="save_workout_button" id="save_workout">Save workout</button>
+                <button class="delete_workout_button" id="delete_workout">Delete workout</button>
+                <button class="add_workout_plans"> <span><i class="fa fa-calendar"></i></span> Add to my workout plans</button>
+                <button class="Download_xls"> <span><i class="fa fa-download"></i></span>Download.xls</button>
+            </div>
+            <h1>Comments</h1>
+            <h3>Add comment</h3>
+            <textarea class="comments" id="comments" name="comments" rows="4" cols="142"></textarea>
+            <button class="comment_button" id="comment_button">Add comment</button><br/><br/>
+            <button class="close_button" id="close_button">Close</button>
         </div>
-        <div>
-          <h3>Exercise</h3>
-          <h3>Sets</h3>
-          <h3>Reps</h3>
-          <h3>Weight</h3>
-        </div>
-        <div>
-          <div>
-            <p>1</p>
-          </div>
-          <input type="text" class="exercise_name" id="exercise_name" />
-          <input type="text" class="sets_number" id="sets_number" /><br /><br />
-          <hr />
-          <input
-            type="text"
-            class="another_sets_number"
-            id="another_sets_number"
-          />
-        </div>
-        <div></div>
-        <h3>Bodyweight:</h3>
-        <input type="text" class="bodyweight" id="bodyweight" />
-        <h3>Notes:</h3>
-        <textarea
-          class="notes"
-          id="notes"
-          name="notes"
-          rows="4"
-          cols="142"
-        ></textarea>
-        <h3>Progress Image:</h3>
-        <img
-          id="blah"
-          src="http://placehold.it/180"
-          alt="your image"
-          class="image_box"
-        /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-        <input type="file" onchange="readURL(this);" class="image_file" />
-        <div class="fifth_div">
-          <button class="save_workout_button" id="save_workout">
-            Save workout
-          </button>
-          <button class="delete_workout_button" id="delete_workout">
-            Delete workout
-          </button>
-          <button class="add_workout_plans">
-            <span><i class="fa fa-calendar"></i></span> Add to my workout plans
-          </button>
-          <button class="Download_xls">
-            <span><i class="fa fa-download"></i></span>Download.xls
-          </button>
-        </div>
-        <h1>Comments</h1>
-        <h3>Add comment</h3>
-        <textarea
-          class="comments"
-          id="comments"
-          name="comments"
-          rows="4"
-          cols="142"
-        ></textarea>
-        <button class="comment_button" id="comment_button">Add comment</button
-        ><br /><br />
-        <button class="close_button" id="close_button">Close</button>
-      </div>
     </div>
-    <hr />
+    <hr/>
     <!--Second_box-->
     <div class="second_box">
-      <!--Second Left Box-->
-      <div class="second_left_box" id="second_left_box">
-        <p>Latest workouts</p>
-        <div class="another_box">
-          <!-- <div id="followed_user">Followed user</div> -->
-          <div id="all_user">All Users</div>
-          <div id="my_gym">My Gym</div>
+        <!--Second Left Box-->
+        <div class="second_left_box" id="second_left_box">
+            <p>Latest workouts</p>
+            <div class="another_box">
+                <!-- <div id="followed_user">Followed user</div> -->
+                <div id="all_user">All Users</div>
+                <div id="my_gym">My Gym</div>
+            </div>
+            <div style="clear: left;"></div>
+            <!-- <hr style="margin-top: 4%"/> -->
         </div>
-        <div style="clear: left"></div>
-        <!-- <hr style="margin-top: 4%"/> -->
-      </div>
-      <!--Second Right Box-->
-      <div class="second_right_box">
-        <p>Personal trainer</p>
-        <p>
-          Gymwolf has certified personal trainers that provide you with
-          customised workout plans depending on your goals. Our trainers track
-          your progress, coach and motivate you daily through our web and
-          smartphone app.
-        </p>
-        <div class="second_right_box_greenContainer">
-          <p>Get your trainer</p>
+        <!--Second Right Box-->
+        <div class="second_right_box">
+            <p>Personal trainer</p>
+            <p>Gymwolf has certified personal trainers that provide you with customised workout plans depending on your goals. Our trainers track your progress, coach and motivate you daily through our web and smartphone app.</p>
+            <div class="second_right_box_greenContainer">
+                <p>Get your trainer</p>
+            </div>
+            <p>Exercise List</p>
+            <div class="image_box chest_image">
+                <div class="image_div">
+                    <p>Chest</p>
+                </div>
+            </div>
+            <div class="image_box bicep_image">
+                <div class="image_div">
+                    <p>Biceps</p>
+                </div>
+            </div>
+            <div class="image_box tricep_image">
+                <div class="image_div">
+                    <p>Triceps</p>
+                </div>
+            </div>
+            <div class="image_box new_line back_image">
+                <div class="image_div">
+                    <p>Back</p>
+                </div>
+            </div>
+            <div class="image_box shoulder_image">
+                <div class="image_div">
+                    <p>Shoulder</p>
+                </div>
+            </div>
+            <div class="image_box leg_image">
+                <div class="image_div">
+                    <p>Legs</p>
+                </div>
+            </div>
+            <div class="image_box new_line abdominal_image">
+                <div class="image_div">
+                    <p>Abdominal</p>
+                </div>
+            </div>
+            <div class="image_box combined_image">
+                <div class="image_div">
+                    <p>Combined</p>
+                </div>
+            </div>
+            <div class="image_box cardio_image">
+                <div class="image_div">
+                    <p>Cardio</p>
+                </div>
+            </div>
         </div>
-        <p>Exercise List</p>
-        <div class="image_box chest_image">
-          <div class="image_div">
-            <p>Chest</p>
-          </div>
-        </div>
-        <div class="image_box bicep_image">
-          <div class="image_div">
-            <p>Biceps</p>
-          </div>
-        </div>
-        <div class="image_box tricep_image">
-          <div class="image_div">
-            <p>Triceps</p>
-          </div>
-        </div>
-        <div class="image_box new_line back_image">
-          <div class="image_div">
-            <p>Back</p>
-          </div>
-        </div>
-        <div class="image_box shoulder_image">
-          <div class="image_div">
-            <p>Shoulder</p>
-          </div>
-        </div>
-        <div class="image_box leg_image">
-          <div class="image_div">
-            <p>Legs</p>
-          </div>
-        </div>
-        <div class="image_box new_line abdominal_image">
-          <div class="image_div">
-            <p>Abdominal</p>
-          </div>
-        </div>
-        <div class="image_box combined_image">
-          <div class="image_div">
-            <p>Combined</p>
-          </div>
-        </div>
-        <div class="image_box cardio_image">
-          <div class="image_div">
-            <p>Cardio</p>
-          </div>
-        </div>
-      </div>
     </div>
 
     <!--Footer Part-->
     <div class="footer">
-      <div class="footer_div">
-        <div>
-          <div>About</div>
-          <div>About us</div>
-          <div>Contact</div>
+        <div class="footer_div">
+            <div>
+                <div>About </div>
+                <div>About us</div>
+                <div>Contact</div>
+            </div>
+            <div style="margin: 40px 0px;">
+                <div>Legal </div>
+                <div >Terms of service </div>
+                <div>Get the app</div>
+                <div>Privacy</div>
+                <div>Pricing</div>
+            </div> 
+            <div style="margin: 40px 30px 40px 30px;">
+                <div>Get the app </div>
+                <div><img src="https://www.gymwolf.com/img/footer/android-button.png" alt=""></div>
+                <div><img src="https://www.gymwolf.com/img/footer/ios-button.png" alt=""></div>
+            </div>
+            <div>
+                <div>SOCIAL </div>
+                <div><img style="width: 55px;" src="https://www.gymwolf.com/img/footer/fb-button.png" alt=""></div>
+            </div>
+            <div style="margin-right: 300px;">
+                <div>LANGUAGE</div>
+                <div>Eesti keeles</div>
+            </div>
         </div>
-        <div style="margin: 40px 0px">
-          <div>Legal</div>
-          <div>Terms of service</div>
-          <div>Get the app</div>
-          <div>Privacy</div>
-          <div>Pricing</div>
-        </div>
-        <div style="margin: 40px 30px 40px 30px">
-          <div>Get the app</div>
-          <div>
-            <img
-              src="https://www.gymwolf.com/img/footer/android-button.png"
-              alt=""
-            />
-          </div>
-          <div>
-            <img
-              src="https://www.gymwolf.com/img/footer/ios-button.png"
-              alt=""
-            />
-          </div>
-        </div>
-        <div>
-          <div>SOCIAL</div>
-          <div>
-            <img
-              style="width: 55px"
-              src="https://www.gymwolf.com/img/footer/fb-button.png"
-              alt=""
-            />
-          </div>
-        </div>
-        <div style="margin-right: 300px">
-          <div>LANGUAGE</div>
-          <div>Eesti keeles</div>
-        </div>
-      </div>
-      <hr />
-      <p>
-        Copyright © Mooncascade OÜ. All Rights Reserved. Tel: +372 5344 5686.
-        E-mail: info@gymwolf.com
-      </p>
+        <hr/>
+        <p>Copyright © Mooncascade OÜ. All Rights Reserved. Tel: +372 5344 5686. E-mail: info@gymwolf.com</p>
     </div>
 
     <!--Nav Bar-->
     <div class="nav_bar">
-      <img
-        src="https://www.gymwolf.com/img/gymwolf.png"
-        alt="logo of gym wolf"
-        class="logo_of_gymwolf"
-      />
-      <a class="first_link" href="../progress/index.html">Progress</a>
-      <a class="second_link" href="../calculator/index.html">Calculators</a>
-      <a class="third_link" href="../myexercises/index.html"
-        >Exercises and plans</a
-      >
-      <a class="fourth_link" href="personal_tainer">My personal trainer</a>
-      <i
-        class="fa fa-comments"
-        style="color: white; font-size: 1.5em; cursor: pointer"
-        id="message"
-        href="#message"
-      ></i>
-      <!-- <label for="name">Chirag Agarwal</label> -->
-      <div class="dropdown">
-        <button class="dropbtn">
-          Chirag Agarwal
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="#">Edit Profile</a>
-          <a href="#">Upgrade to PRO</a>
-          <hr />
-          <a href="#">Language</a>
-          <a href="#">In English</a>
-          <a href="#">Eesti keeles</a>
-          <hr />
-          <a href="../landing_page.html">Log Out</a>
+        <img src="https://www.gymwolf.com/img/gymwolf.png" alt="logo of gym wolf" class="logo_of_gymwolf" />
+        <a class="first_link" href="#Progress">Progress</a>
+        <a class="second_link" href="#Calculator">Calculators</a>
+        <a class="third_link" href="#Exercises and plans">Exercises and plans</a>
+        <a class="fourth_link" href="personal_tainer">My personal trainer</a>
+        <i class="fa fa-comments" style="color: white; font-size: 1.5em; cursor: pointer;" id="message" href="#message"></i>
+        <!-- <label for="name">Chirag Agarwal</label> -->
+        <div class="dropdown">
+            <button class="dropbtn">Chirag Agarwal
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">Edit Profile</a>
+              <a href="#">Upgrade to PRO</a>
+              <hr/>
+              <a href="#">Language</a>
+              <a href="#">In English</a>
+              <a href="#">Eesti keeles</a>
+              <hr/>
+              <a href="#">Log Out</a>
+            </div>
+          </div> 
+        <div class="search_bar">
+            <i class="fa fa-search" aria-hidden="true"></i>
         </div>
-      </div>
-      <div class="search_bar">
-        <i class="fa fa-search" aria-hidden="true"></i>
-      </div>
     </div>
     <script src="login_page.js"></script>
-  </body>
+</body>
 </html>

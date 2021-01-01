@@ -128,6 +128,7 @@ let click_gym = document.getElementById("second_left_box")
 let my_gym_div = document.createElement("div")
 
 let my_gym = document.getElementById("my_gym").addEventListener("click", function() {
+    user_div.remove();
     let html = "";
     html += `<p class="my_gym">Select your gym and find other people who go there:</p>
             <input type="text" id="gym_text" class="gym_text" style="float: left" /><div style="float: left" class="ok_button">ok</div>
@@ -137,9 +138,10 @@ let my_gym = document.getElementById("my_gym").addEventListener("click", functio
     click_gym.appendChild(my_gym_div)
 })
 
+let user_div = document.createElement("div")
+
 let click_followed_users = document.getElementById("all_user").addEventListener("click", function() {
     my_gym_div.remove();
-    // console.log("Followed User function is call")
     for(let i = 0; i < 6; i++) {
         let all_user_div = document.createElement("div");
         all_user_div.style.width = "97.5%"
@@ -208,6 +210,7 @@ let click_followed_users = document.getElementById("all_user").addEventListener(
         user_description_div.appendChild(user_name)
         user_description_div.append(user_details, user_date, extra_div, send_message, add_comments)
         
-        click_gym.appendChild(all_user_div)
+        user_div.appendChild(all_user_div)
+        click_gym.appendChild(user_div)
     }
 })
