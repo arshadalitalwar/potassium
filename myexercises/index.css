@@ -262,9 +262,9 @@ body {
 
 .logo_of_gymwolf {
   width: 150px;
-  height: 40px;
-  margin-left: 130px;
-  margin-top: 20px;
+  height: 30px;
+  margin-left: 108px;
+  margin-top: 28px;
 }
 
 .first_link {
@@ -289,12 +289,17 @@ body {
 .third_link,
 .fourth_link,
 .fifth_link,
+.first_link,
+.search_bar,
 #message {
-  margin-left: 3%;
   color: white;
-  margin-top: 1.5%;
-  font-size: 1.4em;
+  margin-left: 30px;
+  margin-top: 30px;
+  font-size: 16px;
   text-decoration: none;
+}
+.first_link {
+  margin-left: 20%;
 }
 
 .dropdown {
@@ -310,7 +315,8 @@ body {
   background-color: inherit;
   font-family: inherit;
   margin: 0;
-  margin-top: 9%;
+  margin-top: 18px;
+  font-size: 16px;
   /* margin-left: 5%; */
   cursor: pointer;
 }
@@ -348,6 +354,6 @@ body {
 .search_bar {
   background-color: rgb(4, 22, 40);
   color: white;
-  margin-top: 1.8%;
+  margin-top: 30px;
   margin-left: 1%;
 }
