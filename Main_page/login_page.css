@@ -236,10 +236,6 @@
     border-bottom: 1px solid grey;
 }
 
-.popup_content > div:nth-child(3) {
-    /* display: flex; */
-}
-
 .popup_content > div:nth-child(3) > div:nth-child(1) {
     width: 3%;
     height: 30px;
